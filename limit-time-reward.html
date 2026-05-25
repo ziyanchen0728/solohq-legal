@@ -1,1 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solo HQ 限时福利</title>
+  <style>
+    :root {
+      --blue: #0056FF;
+      --blue-light: #EEF4FF;
+      --text: #111827;
+      --subtext: #6B7280;
+      --bg: #F7F8FA;
+      --card: #FFFFFF;
+      --border: #E5E7EB;
+      --warning-bg: #FFF7ED;
+      --warning-text: #9A3412;
+    }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+
+    .hero {
+      padding: 28px 22px;
+      border-radius: 28px;
+      background: linear-gradient(145deg, #EAF1FF 0%, #FFFFFF 72%);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+      border: 1px solid #DFE8FF;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0, 86, 255, 0.08);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 29px;
+      line-height: 1.22;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 12px 0 0;
+      color: #374151;
+      font-size: 15px;
+    }
+
+    .card {
+      margin-top: 16px;
+      padding: 22px;
+      background: var(--card);
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin: 8px 0;
+      font-size: 15px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 7px 0;
+      font-size: 15px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      border-radius: 18px;
+      background: #F9FAFB;
+      border: 1px solid #EEF0F3;
+    }
+
+    .num {
+      flex: 0 0 auto;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .step-title {
+      font-weight: 700;
+      margin: 0 0 2px;
+    }
+
+    .step-desc {
+      margin: 0;
+      color: var(--subtext);
+      font-size: 14px;
+    }
+
+    .email-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: var(--blue-light);
+      border: 1px solid #DCE6FF;
+      color: var(--blue);
+      font-weight: 800;
+      word-break: break-all;
+      text-align: center;
+    }
+
+    .button {
+      display: block;
+      text-align: center;
+      margin-top: 14px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .warning {
+      background: var(--warning-bg);
+      border-color: #FED7AA;
+      color: var(--warning-text);
+    }
+
+    .warning h2 {
+      color: var(--warning-text);
+    }
+
+    .muted {
+      color: var(--subtext);
+      font-size: 13px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 28px;
+      color: var(--subtext);
+      font-size: 13px;
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        padding: 20px 14px 40px;
+      }
+
+      .hero {
+        padding: 24px 20px;
+        border-radius: 24px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .card {
+        padding: 20px;
+        border-radius: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="tag">限时福利</div>
+      <h1>分享你的 Solo HQ 工作流，申请 1 年创始人计划</h1>
+      <p>
+        Solo HQ 刚上线，我们准备了一批 1 年创始人计划兑换码，邀请早期用户分享真实使用体验。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>你需要做什么？</h2>
+      <p>
+        在小红书、抖音、X、YouTube、Reddit、Product Hunt、B 站或其他公开平台，发布一条关于 Solo HQ 的真实使用内容。
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <p class="step-title">发布使用内容</p>
+            <p class="step-desc">可以是截图、短视频、图文笔记、教程，或者你的一人公司工作流分享。</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <p class="step-title">发送链接或截图</p>
+            <p class="step-desc">发布后，将内容链接或截图发送到下方邮箱。</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <p class="step-title">等待人工确认</p>
+            <p class="step-desc">确认内容展示了真实使用场景后，会通过 App Store Offer Code 发放兑换码。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>内容可以怎么写？</h2>
+      <ul>
+        <li>我如何用 Solo HQ 管理一人公司的项目和任务</li>
+        <li>用 Solo HQ 记录收入、支出和项目利润</li>
+        <li>独立开发者如何管理多个产品项目</li>
+        <li>自由职业者如何同时管理客户项目和收支</li>
+        <li>内容创作者如何规划内容项目和待办事项</li>
+        <li>为什么我想把项目、任务和财务放在同一个工作台里</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>内容建议</h2>
+      <ul>
+        <li>展示 Solo HQ 的真实使用场景。</li>
+        <li>图片建议 3 张以上，或发布一段短视频。</li>
+        <li>文字建议 80 字以上。</li>
+        <li>可以分享优点、问题或改进建议。</li>
+        <li>不要求好评，不要求固定话术。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>可以获得什么？</h2>
+      <p>
+        符合条件的内容，可申请 <strong>1 年创始人计划兑换码</strong>。数量有限，先到先得。
+      </p>
+      <p>
+        创始人计划包含：
+      </p>
+      <ul>
+        <li>无限项目</li>
+        <li>无限财务记录</li>
+        <li>完整财务统计</li>
+        <li>完整经营分析</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>如何提交？</h2>
+      <p>
+        发布后，请将内容链接或截图发送至：
+      </p>
+
+      <div class="email-box">
+        quietbyte188@gmail.com
+      </div>
+
+      <a class="button" href="mailto:quietbyte188@gmail.com?subject=Solo%20HQ%20限时福利申请">
+        发送邮件
+      </a>
+
+      <p class="muted">
+        邮件中建议包含：发布平台、内容链接、截图、你的联系邮箱。
+      </p>
+    </section>
+
+    <section class="card warning">
+      <h2>注意事项</h2>
+      <ul>
+        <li>本活动不要求 App Store 评分、评论或好评。</li>
+        <li>不要求发布正面评价，也不要求固定话术。</li>
+        <li>内容可以包含优点、问题或改进建议。</li>
+        <li>不支持虚假内容、搬运内容或重复发布。</li>
+        <li>兑换码通过 App Store Offer Code 发放。</li>
+        <li>兑换结果、适用资格、可用地区和最终权益以 App Store 显示为准。</li>
+        <li>每位用户原则上限领取一次。</li>
+      </ul>
+    </section>
+
+    <p class="footer">
+      © Solo HQ · Contact: quietbyte188@gmail.com
+    </p>
+  </main>
+</body>
+</html>
